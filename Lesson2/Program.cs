@@ -6,5 +6,5 @@
 //int y=Convert.ToInt32(Console.ReadLine());
 string myName = "Иван\nИванов";
 Console.WriteLine(myName);
-string myString = "284";
+string myString = "284"; 
 Console.WriteLine(int.Parse(myString));
