@@ -1,0 +1,10 @@
+﻿//float d = 4506667f;
+//int i = (int)d;
+//Console.WriteLine(i);
+//Console.WriteLine((double)5/9);
+//int x = int.Parse(Console.ReadLine());
+//int y=Convert.ToInt32(Console.ReadLine());
+string myName = "Иван\nИванов";
+Console.WriteLine(myName);
+string myString = "284";
+Console.WriteLine(int.Parse(myString));

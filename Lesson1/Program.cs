@@ -24,5 +24,11 @@
 //double T = t + K;
 //double F = (9* t/5)+32;
 //Console.WriteLine($"В Кельвинах:{T:F2}, в Фаренгейтах:{F:F2}");
+Console.Title = "Чек";
+Console.WriteLine("--------------------------------\n" +
+    "*****************************");
+Console.ForegroundColor = ConsoleColor.Red;
 
-
+Console.WriteLine($"{"N",-4}{"Название",-10}{"Цена",-6}{"Кол.",-6}{"Сумма",-6}");
+Console.ForegroundColor = ConsoleColor.White;
+Console.WriteLine($"{1,-4}{"",-10}{"Цена",-6}{"Кол.",-6}{"Сумма",-6}\n");
