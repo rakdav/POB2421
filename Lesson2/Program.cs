@@ -22,4 +22,11 @@
 //Console.WriteLine(l.ToString());
 //Console.WriteLine($"{Math.PI:F2}");
 //Console.WriteLine($"{Math.E:F1}");
-Console.WriteLine(Math.Sin(60*Math.PI/180));
+//Console.WriteLine(Math.Sin(60*Math.PI/180));
+using System.Threading.Channels;
+
+string number = "28";
+byte b=byte.Parse(number);
+nint ni = (nint)b;
+int i = (int)ni;
+Console.WriteLine(i.GetType());
