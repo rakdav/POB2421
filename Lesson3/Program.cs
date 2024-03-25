@@ -36,7 +36,7 @@ int count3 = int.Parse(Console.ReadLine());
 Console.Write("Введите цену:");
 decimal price3 = int.Parse(Console.ReadLine());
 decimal sum=count1*price1+count2*price2 + count3*price3;
-Console.Title = "Чек";
+Console.Title = "Чек ";
 Console.WriteLine(
     $"--------------------------------\n" +
     $"Организация: {company}\n" +
