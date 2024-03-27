@@ -48,30 +48,34 @@
 //int p=a*b*c*d;
 //Console.WriteLine(p);
 
-using System.Threading.Channels;
+//Console.Write("Введите количество монет:");
+//int n=int.Parse(Console.ReadLine());
+//int bread = 30;
+//int butter = 100;
+//int milk = 40;
+//Console.WriteLine($"Xлеб - {bread}");
+//Console.WriteLine($"Масло - {butter}");
+//Console.WriteLine($"Молоко - {milk}");
+//Console.Write("Введите количество хлеба:");
+//int breadCount=int.Parse(Console.ReadLine());
+//Console.Write("Введите количество масла:");
+//int butterCount = int.Parse(Console.ReadLine());
+//Console.Write("Введите количество молока:");
+//int milkCount = int.Parse(Console.ReadLine());
+//int priceBread = bread * breadCount;
+//int priceButter= butter * butterCount;
+//int priceMilk= milk * milkCount;
+//int total=priceBread + priceButter+priceMilk;
+//Console.WriteLine($"Хлеб   - {breadCount} шт {priceBread} р.");
+//Console.WriteLine($"Масло  - {butterCount} шт {priceButter} р.");
+//Console.WriteLine($"Молоко - {milkCount} шт {priceMilk} р.");
+//Console.WriteLine($"Итого:{total}");
+//Console.WriteLine($"Сдача:{n-total}");
 
-Console.Write("Введите количество монет:");
-int n=int.Parse(Console.ReadLine());
-int bread = 30;
-int butter = 100;
-int milk = 40;
-Console.WriteLine($"Xлеб - {bread}");
-Console.WriteLine($"Масло - {butter}");
-Console.WriteLine($"Молоко - {milk}");
-Console.Write("Введите количество хлеба:");
-int breadCount=int.Parse(Console.ReadLine());
-Console.Write("Введите количество масла:");
-int butterCount = int.Parse(Console.ReadLine());
-Console.Write("Введите количество молока:");
-int milkCount = int.Parse(Console.ReadLine());
-int priceBread = bread * breadCount;
-int priceButter= butter * butterCount;
-int priceMilk= milk * milkCount;
-int total=priceBread + priceButter+priceMilk;
-Console.WriteLine($"Хлеб   - {breadCount} шт {priceBread} р.");
-Console.WriteLine($"Масло  - {butterCount} шт {priceButter} р.");
-Console.WriteLine($"Молоко - {milkCount} шт {priceMilk} р.");
-Console.WriteLine($"Итого:{total}");
-Console.WriteLine($"Сдача:{n-total}");
+Console.Write("Введите день года:");
+int k=int.Parse(Console.ReadLine());
+Console.Write("Введите день недели приходящийся на 1 января(1-пн,2-вт и т.д.:");
+int d=int.Parse(Console.ReadLine());
+Console.WriteLine(k % 7 + d - 1);
 
 
