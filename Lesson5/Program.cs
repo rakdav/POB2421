@@ -19,6 +19,38 @@
 //int encrypt=crypt^key;
 //Console.WriteLine($"Расшифрованное сообщение:{encrypt}");
 
-Console.WriteLine(~8);
-Console.WriteLine(~256854);
-Console.WriteLine(~2146569854);
+//Console.WriteLine(~8);
+//Console.WriteLine(~256854);
+//Console.WriteLine(~2146569854);
+
+//Console.WriteLine(894257>>1);
+//Console.WriteLine(894257<<1);
+//Console.WriteLine(23649587 >> 1);
+//Console.WriteLine(23649587 << 1);
+
+//int x = 18;
+//x += 259;
+//Console.WriteLine(x);
+
+//x = 948;
+//x += 259;
+//Console.WriteLine(x);
+
+//x = 8246;
+//x += 259;
+//Console.WriteLine(x);
+
+//x = 297854;
+//x += 259;
+//Console.WriteLine(x);
+
+Console.Write("Введите первое число:");
+int x = int.Parse(Console.ReadLine());
+Console.Write("Введите второе число:");
+int y = int.Parse(Console.ReadLine());
+Console.WriteLine(x&y);
+Console.WriteLine(x|y);
+Console.WriteLine(~x);
+Console.WriteLine(x^y);
+Console.WriteLine(x>>y);
+Console.WriteLine(x<<y);
