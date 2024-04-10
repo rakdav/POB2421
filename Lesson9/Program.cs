@@ -56,14 +56,172 @@
 //    case 4: Console.WriteLine("черви"); break;
 //}
 
-Console.Write("Введите рубли:");
-int n=int.Parse(Console.ReadLine());
-if (n % 100 >= 11 && n % 100 <= 14)
-    Console.WriteLine(n + " рублей");
-else
-    switch (n % 10)
-    {
-        case 1: Console.WriteLine(n + " рубль");break;
-        case 2:case 3:case 4: Console.WriteLine(n+" рубля");break;
-        default: Console.WriteLine(n + " рублей"); break;
-    }
+//Console.Write("Введите рубли:");
+//int n=int.Parse(Console.ReadLine());
+//if (n % 100 >= 11 && n % 100 <= 14)
+//    Console.WriteLine(n + " рублей");
+//else
+//    switch (n % 10)
+//    {
+//        case 1: Console.WriteLine(n + " рубль");break;
+//        case 2:case 3:case 4: Console.WriteLine(n+" рубля");break;
+//        default: Console.WriteLine(n + " рублей"); break;
+//    }
+
+//Random random = new Random();
+//Console.Write("Меню:\n" +
+//    "1 - сгенерировать целое число\n" +
+//    "2 - сгенерировать вещественное число\n" +
+//    "3 - сгенерировать число в диапазоне\n");
+//int n=int.Parse(Console.ReadLine());
+//switch (n)
+//{
+//    case 1:
+//        {
+//            Console.Write("Введите верхнюю границу числа:");
+//            int m=int.Parse(Console.ReadLine());
+//            Console.WriteLine(random.Next(m+1));
+//        }
+//        break;
+//    case 2:
+//        {
+//            Console.Write("Введите верхнюю границу числа:");
+//            int m = int.Parse(Console.ReadLine());
+//            Console.WriteLine($"{random.NextDouble()*m:F2}");
+//        }
+//        break;
+//    case 3:
+//        {
+//            Console.Write("Введите нижнюю границу:");
+//            int min = int.Parse(Console.ReadLine());
+//            Console.Write("Введите верхнюю границу:");
+//            int max = int.Parse(Console.ReadLine());
+//            if(min > max)
+//            {
+//                int temp = min;
+//                min = max;
+//                max = temp;
+//            }
+//            Console.WriteLine(random.Next(min,max+1));
+//        }
+//        break;
+//}
+
+//Random random = new Random();
+//Console.Write("Введите первый элемент:");
+//string a=Console.ReadLine();
+//Console.Write("Введите второй элемент:");
+//string b = Console.ReadLine();
+//Console.Write("Введите третий элемент:");
+//string c = Console.ReadLine();
+
+//switch (random.Next(1,4))
+//{
+//    case 1: Console.Write(a); break;
+//    case 2: Console.Write(b); break;
+//    case 3: Console.Write(c); break;
+//}
+
+//Random random = new Random();
+//Console.Write("1 - доллар\n" +
+//    "2 - евро\n" +
+//    "3 - юань\n");
+//int n = int.Parse(Console.ReadLine());
+//Console.Write("Введите количество валюты:");
+//decimal money=decimal.Parse(Console.ReadLine());
+//switch (n)
+//{
+//    case 1:
+//        {
+//            Console.Write("Введите курс доллара:");
+//            decimal kurs = decimal.Parse(Console.ReadLine());
+//            Console.WriteLine($"{money} долларов {kurs * money} рублей");
+//        }
+//        break;
+//    case 2:
+//        {
+//            Console.Write("Введите курс евро:");
+//            decimal kurs = decimal.Parse(Console.ReadLine());
+//            Console.WriteLine($"{money} евро {kurs * money} рублей");
+//        }
+//        break;
+//    case 3:
+//        {
+//            Console.Write("Введите курс юаня:");
+//            decimal kurs = decimal.Parse(Console.ReadLine());
+//            Console.WriteLine($"{money} юаней {kurs * money} рублей");
+//        }
+//        break;
+//}
+
+//Console.Write("Выберите: 1 - камень, 2 - ножницы, 3 - бумага:");
+//int n=int.Parse(Console.ReadLine());
+//Random random = new Random();
+//int m=random.Next(1,4);
+//switch (n)
+//{
+//    case 1: 
+//        {
+//            Console.Write("Камень - ");
+//            if (m == 1) Console.WriteLine("Камень. Ничья");
+//            else if (m == 2) Console.WriteLine("Ножницы. Победа");
+//            else Console.WriteLine("Бумага. Поражение");
+//        } 
+//        break;
+//    case 2:
+//        {
+//            Console.Write("Ножницы - ");
+//            if (m == 1) Console.WriteLine("Камень. Поражение");
+//            else if (m == 2) Console.WriteLine("Ножницы. Ничья");
+//            else Console.WriteLine("Бумага. Победа");
+//        }
+//        break;
+//    case 3:
+//        {
+//            Console.Write("Бумага - ");
+//            if (m == 1) Console.WriteLine("Камень. Победа");
+//            else if (m == 2) Console.WriteLine("Ножницы. Поражение");
+//            else Console.WriteLine("Бумага. Ничья");
+//        }
+//        break;
+//}
+
+Random random = new Random();
+int n=random.Next(100);
+int m=random.Next(100);
+int count = 0;
+switch (random.Next(1, 5))
+{
+    case 1:
+        {
+            Console.WriteLine($"{n}+{m}");
+            Console.Write("Введите ответ:");
+            int s=int.Parse(Console.ReadLine());
+            if (n + m == s) count++;
+        }
+        break;
+    case 2:
+        {
+            Console.WriteLine($"{n}-{m}");
+            Console.Write("Введите ответ:");
+            int s = int.Parse(Console.ReadLine());
+            if (n - m == s) count++;
+        }
+        break;
+    case 3:
+        {
+            Console.WriteLine($"{n}*{m}");
+            Console.Write("Введите ответ:");
+            int s = int.Parse(Console.ReadLine());
+            if (n * m == s) count++;
+        }
+        break;
+    case 4:
+        {
+            Console.WriteLine($"{n}/{m}");
+            Console.Write("Введите ответ:");
+            int s = int.Parse(Console.ReadLine());
+            if (n / m == s) count++;
+        }
+        break;
+}
