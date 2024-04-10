@@ -183,19 +183,19 @@
 //Если пользователь угадывает цвет, программа выводит сообщение
 //о победе. Если нет, программа выводит сообщение о том, был ли
 //введен цвет раньше или позже загаданного. 
-Random random = new Random();
-int color = random.Next(3);
-string textColor="";
-if (color == 0) textColor="Красный";
-else if (color == 1) textColor="Зеленый";
-else if(color == 2) textColor="Cиний";
-string myColor=Console.ReadLine();
-int myColorInt = -1;
-if (myColor == "Красный") myColorInt = 0;
-else if (myColor == "Зеленый") myColorInt = 1;
-else myColorInt=2;
-if (color == myColorInt) Console.WriteLine("Победа");
-else if (color < myColorInt) Console.WriteLine("Раньше");
-else Console.WriteLine("Позже");
+//Random random = new Random();
+//int color = random.Next(3);
+//string textColor="";
+//if (color == 0) textColor="Красный";
+//else if (color == 1) textColor="Зеленый";
+//else if(color == 2) textColor="Cиний";
+//string myColor=Console.ReadLine();
+//int myColorInt = -1;
+//if (myColor == "Красный") myColorInt = 0;
+//else if (myColor == "Зеленый") myColorInt = 1;
+//else myColorInt=2;
+//if (color == myColorInt) Console.WriteLine("Победа");
+//else if (color < myColorInt) Console.WriteLine("Раньше");
+//else Console.WriteLine("Позже");
 
 
