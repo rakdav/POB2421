@@ -187,41 +187,59 @@
 //}
 
 Random random = new Random();
-int n=random.Next(100);
-int m=random.Next(100);
+int i = 1;
 int count = 0;
-switch (random.Next(1, 5))
+while (i<=10) 
 {
-    case 1:
-        {
-            Console.WriteLine($"{n}+{m}");
-            Console.Write("Введите ответ:");
-            int s=int.Parse(Console.ReadLine());
-            if (n + m == s) count++;
-        }
-        break;
-    case 2:
-        {
-            Console.WriteLine($"{n}-{m}");
-            Console.Write("Введите ответ:");
-            int s = int.Parse(Console.ReadLine());
-            if (n - m == s) count++;
-        }
-        break;
-    case 3:
-        {
-            Console.WriteLine($"{n}*{m}");
-            Console.Write("Введите ответ:");
-            int s = int.Parse(Console.ReadLine());
-            if (n * m == s) count++;
-        }
-        break;
-    case 4:
-        {
-            Console.WriteLine($"{n}/{m}");
-            Console.Write("Введите ответ:");
-            int s = int.Parse(Console.ReadLine());
-            if (n / m == s) count++;
-        }
-        break;
+    int n = random.Next(10);
+    int m = random.Next(10);
+    switch (random.Next(1, 5))
+    {
+        case 1:
+            {
+                Console.WriteLine($"{n}+{m}");
+                Console.Write("Введите ответ:");
+                int s = int.Parse(Console.ReadLine());
+                if (n + m == s) count++;
+            }
+            break;
+        case 2:
+            {
+                Console.WriteLine($"{n}-{m}");
+                Console.Write("Введите ответ:");
+                int s = int.Parse(Console.ReadLine());
+                if (n - m == s) count++;
+            }
+            break;
+        case 3:
+            {
+                Console.WriteLine($"{n}*{m}");
+                Console.Write("Введите ответ:");
+                int s = int.Parse(Console.ReadLine());
+                if (n * m == s) count++;
+            }
+            break;
+        case 4:
+            {
+                Console.WriteLine($"{n}/{m}");
+                Console.Write("Введите ответ:");
+                int s = int.Parse(Console.ReadLine());
+                if (n / m == s) count++;
+            }
+            break;
+    }
+    i++;
 }
+Console.WriteLine(count);
+
+//Console.Write("Введите ваш возраст:");
+//int age=int.Parse(Console.ReadLine());
+//if (age < 18) Console.WriteLine("Вы слишкоммолоды для участия в выборах");
+//else if (age >= 18 && age <= 35) Console.WriteLine("Вы можете участвовать в выборах в качестве депутата");
+//else if (age >= 36 && age <= 65) Console.WriteLine("Вы можете участвовать в выборах в качестве кандидата в президенты");
+//else Console.WriteLine("Ваш возраст слишком велик для участия в выборах");
+
+//Console.WriteLine("Кандидаты в президенты солнечного города:\r\n● Незнайка\r\n● Лунтик\r\n● Карлсон\r\n● Дядя Фёдор");
+//Console.Write("За кого бы вы голосовали:");
+//string name=Console.ReadLine();
+//if (name == "Незнайка") Console.WriteLine("А у тебя в животе арбуз вырастет!!!");
