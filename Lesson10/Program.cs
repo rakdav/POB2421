@@ -190,8 +190,31 @@
 //число и выводит на экран все простые числа от 1 до этого числа 
 //включительно. 
 
-using System.Threading.Channels;
-
+//int n;
+//do
+//{
+//    Console.Write("Введите число больше нуля:");
+//    n = int.Parse(Console.ReadLine());
+//}
+//while (n <= 0);
+//int i = 1;
+//while (i <= n)
+//{
+//    int j = 2;
+//    int k = 0;
+//    while(j < i)
+//    {
+//        if (i % j == 0)
+//        {
+//            k++;
+//            break;
+//        }
+//        j++;
+//    }
+//    if (k == 0) Console.Write(i +" ");
+//    i++;
+//}
+//9. Вывести двоичное представление числа
 int n;
 do
 {
@@ -199,22 +222,16 @@ do
     n = int.Parse(Console.ReadLine());
 }
 while (n <= 0);
-int i = 1;
-while (i <= n)
+string result = "";
+while (n != 1)
 {
-    int j = 2;
-    int k = 0;
-    while(j < i)
-    {
-        if (i % j == 0)
-        {
-            k++;
-            break;
-        }
-        j++;
-    }
-    if (k == 0) Console.Write(i +" ");
-    i++;
+    result += n % 2;
+    n /= 2;
 }
-
+result+="1";
+int i = result.Length - 1;
+while(i >= 0)
+{
+    Console.Write(result[i--]);    
+}
 
