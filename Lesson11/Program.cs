@@ -127,14 +127,14 @@ for (int i = 0; i < 9; i++)
         //else if (i == 8 && j > 3 && j < 7) Console.Write("*");
         //else if (i == 9 && j == 5) Console.Write("*");
         //else Console.Write(" ");
-        if (i < i % 2)
+        if (j< i % 2)
         {
             for (int k = 1; k < i % 2; k += 2) Console.Write("*");
             
         }
-        else if()
+        else if(j>i%2)
         {
-
+            for (int k = i % 2; k >0; k += 2) Console.Write("*");
         }
         else Console.Write(" ");
     }
