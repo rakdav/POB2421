@@ -186,51 +186,51 @@
 //        break;
 //}
 
-Random random = new Random();
-int i = 1;
-int count = 0;
-while (i<=10) 
-{
-    int n = random.Next(10);
-    int m = random.Next(10);
-    switch (random.Next(1, 5))
-    {
-        case 1:
-            {
-                Console.WriteLine($"{n}+{m}");
-                Console.Write("Введите ответ:");
-                int s = int.Parse(Console.ReadLine());
-                if (n + m == s) count++;
-            }
-            break;
-        case 2:
-            {
-                Console.WriteLine($"{n}-{m}");
-                Console.Write("Введите ответ:");
-                int s = int.Parse(Console.ReadLine());
-                if (n - m == s) count++;
-            }
-            break;
-        case 3:
-            {
-                Console.WriteLine($"{n}*{m}");
-                Console.Write("Введите ответ:");
-                int s = int.Parse(Console.ReadLine());
-                if (n * m == s) count++;
-            }
-            break;
-        case 4:
-            {
-                Console.WriteLine($"{n}/{m}");
-                Console.Write("Введите ответ:");
-                int s = int.Parse(Console.ReadLine());
-                if (n / m == s) count++;
-            }
-            break;
-    }
-    i++;
-}
-Console.WriteLine(count);
+//Random random = new Random();
+//int i = 1;
+//int count = 0;
+//while (i<=10) 
+//{
+//    int n = random.Next(10);
+//    int m = random.Next(10);
+//    switch (random.Next(1, 5))
+//    {
+//        case 1:
+//            {
+//                Console.WriteLine($"{n}+{m}");
+//                Console.Write("Введите ответ:");
+//                int s = int.Parse(Console.ReadLine());
+//                if (n + m == s) count++;
+//            }
+//            break;
+//        case 2:
+//            {
+//                Console.WriteLine($"{n}-{m}");
+//                Console.Write("Введите ответ:");
+//                int s = int.Parse(Console.ReadLine());
+//                if (n - m == s) count++;
+//            }
+//            break;
+//        case 3:
+//            {
+//                Console.WriteLine($"{n}*{m}");
+//                Console.Write("Введите ответ:");
+//                int s = int.Parse(Console.ReadLine());
+//                if (n * m == s) count++;
+//            }
+//            break;
+//        case 4:
+//            {
+//                Console.WriteLine($"{n}/{m}");
+//                Console.Write("Введите ответ:");
+//                int s = int.Parse(Console.ReadLine());
+//                if (n / m == s) count++;
+//            }
+//            break;
+//    }
+//    i++;
+//}
+//Console.WriteLine(count);
 
 //Console.Write("Введите ваш возраст:");
 //int age=int.Parse(Console.ReadLine());
@@ -243,3 +243,81 @@ Console.WriteLine(count);
 //Console.Write("За кого бы вы голосовали:");
 //string name=Console.ReadLine();
 //if (name == "Незнайка") Console.WriteLine("А у тебя в животе арбуз вырастет!!!");
+
+using System.Threading.Channels;
+
+Random random = new Random();
+int n=random.Next(13);
+switch (n)
+{
+    case 1:
+        {
+            Console.WriteLine("Январь");
+        }
+        break;
+    case 2:
+        {
+            Console.WriteLine("Февраль");
+        }
+        break;
+    case 3:
+        {
+            Console.WriteLine("Март");
+        }
+        break;
+    case 4:
+        {
+            Console.WriteLine("Апрель");
+        }
+        break;
+    case 5:
+        {
+            Console.WriteLine("Май");
+        }
+        break;
+    case 6:
+        {
+            Console.WriteLine("Июнь");
+        }
+        break;
+    case 7:
+        {
+            Console.WriteLine("Июль");
+        }
+        break;
+    case 8:
+        {
+            Console.WriteLine("Август");
+        }
+        break;
+    case 9:
+        {
+            Console.WriteLine("Сентябрь");
+        }
+        break;
+    case 10:
+        {
+            Console.WriteLine("Октябрь");
+        }
+        break;
+    case 11:
+        {
+            Console.WriteLine("Ноябрь");
+        }
+        break;
+    case 12:
+        {
+            Console.WriteLine("Декабрь");
+        }
+        break;
+}
+Console.Write("Введите количество дней:");
+int m = int.Parse(Console.ReadLine());
+if (n == 1 || n == 3 || n == 5 || n == 7 || n == 8 || n == 10 || n == 12)
+    if (m == 31) Console.WriteLine("Победа");
+    else Console.WriteLine($"Поражение! В этом месяце 31 день");
+else if (n == 4 || n == 6 || n == 9 || n == 11) 
+        if(m==30) Console.WriteLine("Победа");
+        else Console.WriteLine($"Поражение! В этом месяце 30 дней");
+else if(n==2&&(m==28||m==29)) Console.WriteLine("Победа");
+     else Console.WriteLine($"Поражение! В этом месяце 28 или 29 дней");
