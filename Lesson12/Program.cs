@@ -178,31 +178,66 @@
 //длинную строку, а также выведите на экран все строки, содержащие 
 //букву "а". 
 
-string[] mas=new string[8];
+//string[] mas=new string[8];
+//for (int i = 0; i < mas.Length; i++)
+//{
+//    Console.Write($"Введите {i + 1} строку:");
+//    mas[i] = Console.ReadLine();
+//}
+//int max = mas[0].Length;
+//int min= mas[0].Length;
+//string maxStr = mas[0];
+//string minStr = mas[0];
+//for (int i = 0; i < mas.Length; i++)
+//{
+//    if (mas[i].Length > max)
+//    {
+//        max = mas[i].Length;
+//        maxStr = mas[i];
+//    }
+//    if (mas[i].Length < min)
+//    {
+//        min = mas[i].Length;
+//        minStr = mas[i];
+//    }
+//    if (mas[i].Contains("a")|| mas[i].Contains("A")) 
+//        Console.Write(mas[i] + " ");
+//}
+//Console.WriteLine("max=" + maxStr + " min=" + minStr);
+
+//6.Создайте массив из 30 случайных целых чисел и выведите на экран 
+//все элементы, которые встречаются в массиве больше одного раза.
+int[] mas= new int[30];
+Random random=new Random();
 for (int i = 0; i < mas.Length; i++)
 {
-    Console.Write($"Введите {i + 1} строку:");
-    mas[i] = Console.ReadLine();
+	mas[i] = random.Next(50);
+	Console.Write(mas[i]+" ");	
 }
-int max = mas[0].Length;
-int min= mas[0].Length;
-string maxStr = mas[0];
-string minStr = mas[0];
-for (int i = 0; i < mas.Length; i++)
+Console.WriteLine();
+int[] masWithoutRepeat= new int[30];
+int k = 0;
+for (int i = 0;i<mas.Length-1;i++)
 {
-    if (mas[i].Length > max)
-    {
-        max = mas[i].Length;
-        maxStr = mas[i];
-    }
-    if (mas[i].Length < min)
-    {
-        min = mas[i].Length;
-        minStr = mas[i];
-    }
-    if (mas[i].Contains("a")|| mas[i].Contains("A")) 
-        Console.Write(mas[i] + " ");
+	for (int j = i+1; j < mas.Length; j++)
+	{
+		if (mas[i] == mas[j])
+		{
+			bool isTrue=false;
+			for(int l = 0; l < k; l++)
+			{
+				if (masWithoutRepeat[l] == mas[i])
+				{
+					isTrue=true;
+					break;
+				}
+			}
+			if(isTrue==false) masWithoutRepeat[k++] = mas[i];
+		}
+	}
 }
-Console.WriteLine("max=" + maxStr + " min=" + minStr);
-
-
+for(int i = 0; i < k; i++)
+{
+	Console.Write(masWithoutRepeat[i]+" ");
+}
+Console.WriteLine();
