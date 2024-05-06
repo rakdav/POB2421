@@ -126,15 +126,31 @@
 //        Console.WriteLine(mas[i, 0]+" " + mas[i, 1]+" " + mas[i,2]);
 //}
 
-int[,] mas=new int[7,7];
-for (int i = 0; i < mas.GetLength(0); i++)
+//int[,] mas=new int[7,7];
+//for (int i = 0; i < mas.GetLength(0); i++)
+//{
+//    for (int j = 0; j < mas.GetLength(1); j++)
+//    {
+//        //if(i==j||i+j==mas.GetLength(0)-1||j==mas.GetLength(1)/2||
+//        //    i==mas.GetLength(0)/2) mas[i, j] = 1;
+//        if((i<=j&&i+j<=mas.GetLength(0)-1)||(i>=j&&i+j>=mas.GetLength(0)-1)) mas[i, j] = 1;
+//        Console.Write(mas[i, j] + " ");
+//    }
+//    Console.WriteLine();
+//}
+//Console.WriteLine((int)'0');
+//Console.WriteLine((int)'z');
+//for (int i = (int)'0'; i <=(int)'z'; i++)
+//{
+//    Console.WriteLine(i);
+//}
+Random random = new Random();
+Console.WriteLine("Введите длину пароля:");
+int n = int.Parse(Console.ReadLine());
+string password = "";
+for (int i = 0; i < n; i++)
 {
-    for (int j = 0; j < mas.GetLength(1); j++)
-    {
-        //if(i==j||i+j==mas.GetLength(0)-1||j==mas.GetLength(1)/2||
-        //    i==mas.GetLength(0)/2) mas[i, j] = 1;
-        if((i<=j&&i+j<=mas.GetLength(0)-1)||(i>=j&&i+j>=mas.GetLength(0)-1)) mas[i, j] = 1;
-        Console.Write(mas[i, j] + " ");
-    }
-    Console.WriteLine();
+    int m = random.Next(48,123);
+    password += (char)m;
 }
+Console.WriteLine(password);
