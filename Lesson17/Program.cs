@@ -111,32 +111,34 @@
 //Выполните операции или выведите полученные числа по вашему 
 //выбору. 
 
-using System.Threading.Channels;
+//using System.Threading.Channels;
 
-Console.Write("Введите строку:");
-string str = Console.ReadLine();
-string[] mas = str.Split(' ');
-foreach (string strNumber in mas)
-{
-    bool isNumber = true;
-    for (int i = 0; i < strNumber.Length; i++)
-    {
-        if (!char.IsDigit(strNumber[i])&&strNumber[i]!=','&&strNumber[i] != '.') 
-        { 
-            isNumber = false;
-            break;
-        }
-    }
-    if (isNumber&&!strNumber.Contains('.')&&!strNumber.Contains(','))Console.WriteLine(int.Parse(strNumber));
-    else
-    if (isNumber && (strNumber.Contains('.') || strNumber.Contains(',')))
-    {
-        if (strNumber.Contains('.'))
-        {
-            string temp = strNumber.Replace('.', ',');
-            Console.WriteLine(double.Parse(temp));
-        }
-        else Console.WriteLine(double.Parse(strNumber));
+//Console.Write("Введите строку:");
+//string str = Console.ReadLine();
+//string[] mas = str.Split(' ');
+//foreach (string strNumber in mas)
+//{
+//    bool isNumber = true;
+//    for (int i = 0; i < strNumber.Length; i++)
+//    {
+//        if (!char.IsDigit(strNumber[i])&&strNumber[i]!=','&&strNumber[i] != '.') 
+//        { 
+//            isNumber = false;
+//            break;
+//        }
+//    }
+//    if (isNumber&&!strNumber.Contains('.')&&!strNumber.Contains(','))Console.WriteLine(int.Parse(strNumber));
+//    else
+//    if (isNumber && (strNumber.Contains('.') || strNumber.Contains(',')))
+//    {
+//        if (strNumber.Contains('.'))
+//        {
+//            string temp = strNumber.Replace('.', ',');
+//            Console.WriteLine(double.Parse(temp));
+//        }
+//        else Console.WriteLine(double.Parse(strNumber));
 
-    }
-}
+//    }
+//}
+while(true)
+Console.WriteLine(Console.ReadKey().Key);
