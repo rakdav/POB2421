@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 //FileStream
 
@@ -166,13 +167,25 @@
 //Попросите пользователя ввести имя файла для удаления.
 //Удалите указанный файл, если он существует.
 
-Console.Write("Введите имя файла для удаления:");
-string delFile = Console.ReadLine();
-FileInfo file = new FileInfo(delFile);
-if (file.Exists)
+//Console.Write("Введите имя файла для удаления:");
+//string delFile = Console.ReadLine();
+//FileInfo file = new FileInfo(delFile);
+//if (file.Exists)
+//{
+//    file.Delete();
+//}
+
+//Задача 6: Переименование файла
+//Попросите пользователя ввести текущее имя файла и новое имя файла.
+//Переименуйте указанный файл, если он существует
+
+Console.WriteLine("Введите имя файла:");
+string fileName = Console.ReadLine()!;
+FileInfo info = new FileInfo(fileName);
+if (info.Exists)
 {
-    file.Delete();
+    Console.WriteLine("Введите новое имя файла:");
+    string newFileName = Console.ReadLine()!;
+    info.MoveTo(newFileName);
 }
-
-
 
