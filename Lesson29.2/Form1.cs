@@ -38,14 +38,18 @@ namespace Lesson29._2
             stringClass.setStroka(textBoxText.Text);
             if(textBoxIndex.Text.Length!=0)
             labelResult.Text = stringClass.SubString(int.Parse(textBoxIndex.Text));
+            else labelResult.Text = "";
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             stringClass.setStroka(textBoxText.Text);
-            if(textBoxSearch.Text.Length!=0)
-            if (stringClass.Search(textBoxSearch.Text)) labelResult.Text = "Строка содержит cлово " + textBoxSearch.Text;
-            else labelResult.Text = "Строка не содержит cлово " + textBoxSearch.Text;
+            if (textBoxSearch.Text.Length != 0)
+            {
+                if (stringClass.Search(textBoxSearch.Text)) labelResult.Text = "Строка содержит cлово " + textBoxSearch.Text;
+                else labelResult.Text = "Строка не содержит cлово " + textBoxSearch.Text;
+            }
+            else labelResult.Text = "";
         }
     }
 }
