@@ -176,10 +176,11 @@
             // 
             // labelOutput
             // 
+            labelOutput.AutoSize = true;
             labelOutput.Dock = DockStyle.Fill;
             labelOutput.Location = new Point(0, 0);
             labelOutput.Name = "labelOutput";
-            labelOutput.Size = new Size(459, 511);
+            labelOutput.Size = new Size(0, 25);
             labelOutput.TabIndex = 0;
             // 
             // Form1
@@ -200,6 +201,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
