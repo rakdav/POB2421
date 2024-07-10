@@ -13,7 +13,7 @@ namespace Lesson29._6
         {
             this.temp = temp;
         }
-        public double TpKelvin() => this.temp + 273.15;
+        public double ToKelvin() => this.temp + 273.15;
         public double ToFarengate() => this.temp * 1.8 + 32;
     }
 }
