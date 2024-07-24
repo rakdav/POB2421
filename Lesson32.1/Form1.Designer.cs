@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             listBoxTitle = new ListBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            удалитьToolStripMenuItem = new ToolStripMenuItem();
             listBoxAuthor = new ListBox();
             listBoxYear = new ListBox();
             label1 = new Label();
@@ -40,8 +42,8 @@
             label3 = new Label();
             buttonAdd = new Button();
             buttonUpload = new Button();
-            contextMenuStrip1 = new ContextMenuStrip(components);
-            удалитьToolStripMenuItem = new ToolStripMenuItem();
+            label4 = new Label();
+            textBoxSearch = new TextBox();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,6 +55,20 @@
             listBoxTitle.Name = "listBoxTitle";
             listBoxTitle.Size = new Size(189, 424);
             listBoxTitle.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { удалитьToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(135, 28);
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            удалитьToolStripMenuItem.Size = new Size(134, 24);
+            удалитьToolStripMenuItem.Text = "Удалить";
+            удалитьToolStripMenuItem.Click += удалитьToolStripMenuItem_Click;
             // 
             // listBoxAuthor
             // 
@@ -136,26 +152,32 @@
             buttonUpload.TabIndex = 10;
             buttonUpload.Text = "Выгрузить список";
             buttonUpload.UseVisualStyleBackColor = true;
+            buttonUpload.Click += buttonUpload_Click;
             // 
-            // contextMenuStrip1
+            // label4
             // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { удалитьToolStripMenuItem });
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(211, 56);
+            label4.AutoSize = true;
+            label4.Location = new Point(7, 443);
+            label4.Name = "label4";
+            label4.Size = new Size(52, 20);
+            label4.TabIndex = 11;
+            label4.Text = "Поиск";
             // 
-            // удалитьToolStripMenuItem
+            // textBoxSearch
             // 
-            удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            удалитьToolStripMenuItem.Size = new Size(210, 24);
-            удалитьToolStripMenuItem.Text = "Удалить";
-            удалитьToolStripMenuItem.Click += удалитьToolStripMenuItem_Click;
+            textBoxSearch.Location = new Point(69, 443);
+            textBoxSearch.Name = "textBoxSearch";
+            textBoxSearch.Size = new Size(503, 27);
+            textBoxSearch.TabIndex = 12;
+            textBoxSearch.TextChanged += textBoxSearch_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 478);
+            Controls.Add(textBoxSearch);
+            Controls.Add(label4);
             Controls.Add(buttonUpload);
             Controls.Add(buttonAdd);
             Controls.Add(textBoxYear);
@@ -189,5 +211,7 @@
         private Button buttonUpload;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem удалитьToolStripMenuItem;
+        private Label label4;
+        private TextBox textBoxSearch;
     }
 }
