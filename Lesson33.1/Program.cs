@@ -1,4 +1,6 @@
-﻿string path = "C:\\Users\\C4PCT\\source";
+﻿Console.Write("Введите путь к папке:");
+string path = Console.ReadLine()!;
+
 void PrintDirectory(DirectoryInfo directory, string indent,bool lastDirectory)
 {
     Console.Write(indent);
