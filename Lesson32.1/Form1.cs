@@ -3,10 +3,23 @@ namespace Lesson32._1
     public partial class Form1 : Form
     {
         private Library library;
+        private string path;
         public Form1()
         {
             InitializeComponent();
             library = new Library();
+            path = "library.dat";
+            using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.OpenOrCreate)))
+            {
+                while (reader.PeekChar() > -1)
+                {
+                    string title=reader.ReadString();
+                    string author=reader.ReadString();
+                    int year=reader.ReadInt32();
+                    library.AddBook(new Book(title, author, year));
+                }
+            }
+            UpdateForm();
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
@@ -30,9 +43,12 @@ namespace Lesson32._1
         }
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string title = listBoxTitle.SelectedItem!.ToString()!;
-            library.Remove(title);
-            UpdateForm();
+            if (listBoxTitle.SelectedIndex != -1)
+            {
+                string title = listBoxTitle.SelectedItem!.ToString()!;
+                library.Remove(title);
+                UpdateForm();
+            }
         }
         private void UpdateForm()
         {
@@ -83,7 +99,16 @@ namespace Lesson32._1
 
         private void buttonUpload_Click(object sender, EventArgs e)
         {
-
+            using(BinaryWriter writer=new BinaryWriter(File.Open(path,FileMode.OpenOrCreate)))
+            {
+                foreach (var item in library.GetBooks())
+                {
+                    writer.Write(item.getTitle());
+                    writer.Write(item.getAuthor());
+                    writer.Write(item.getYear());
+                }
+                MessageBox.Show("Данные успешно сохранены.");
+            }
         }
     }
 }
