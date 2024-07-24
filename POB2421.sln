@@ -95,11 +95,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson30", "Lesson30\Lesson
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson31", "Lesson31\Lesson31.csproj", "{59A32BBE-60F7-4B60-BB93-D1BCD0E880C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson31.1", "Lesson31.1\Lesson31.1.csproj", "{7E4EAF15-013D-4A85-A090-5BA253025B71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson31.1", "Lesson31.1\Lesson31.1.csproj", "{7E4EAF15-013D-4A85-A090-5BA253025B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson32", "Lesson32\Lesson32.csproj", "{88AD9D0D-FD2B-4E05-8A8A-78ABF90BF03E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson32", "Lesson32\Lesson32.csproj", "{88AD9D0D-FD2B-4E05-8A8A-78ABF90BF03E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson32.1", "Lesson32.1\Lesson32.1.csproj", "{D9388D82-DFCE-4F50-9768-FCCA23CE4BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson32.1", "Lesson32.1\Lesson32.1.csproj", "{D9388D82-DFCE-4F50-9768-FCCA23CE4BBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson33.1", "Lesson33.1\Lesson33.1.csproj", "{AAC11E57-3182-4710-BF0A-6E1F6575A25E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -303,6 +305,10 @@ Global
 		{D9388D82-DFCE-4F50-9768-FCCA23CE4BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9388D82-DFCE-4F50-9768-FCCA23CE4BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9388D82-DFCE-4F50-9768-FCCA23CE4BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC11E57-3182-4710-BF0A-6E1F6575A25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC11E57-3182-4710-BF0A-6E1F6575A25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC11E57-3182-4710-BF0A-6E1F6575A25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC11E57-3182-4710-BF0A-6E1F6575A25E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
