@@ -6,6 +6,7 @@ Console.SetWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 Console.SetBufferSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 
 DrawConsole(0, 0, WINDOW_WIDTH, 25);
+DrawConsole(0, 25, WINDOW_WIDTH, 25);
 
 void DrawConsole(int left,int top, int width, int height)
 {
@@ -19,6 +20,9 @@ void DrawConsole(int left,int top, int width, int height)
         for (int j = 0; j < width - 2; j++) Console.Write(" ");
         Console.Write("│");
     }
+    Console.Write("└");
+    for (int j = 0; j < width - 2; j++) Console.Write("─");
+    Console.WriteLine("┘");
 }
 //do
 //{
