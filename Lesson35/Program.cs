@@ -13,6 +13,12 @@ void DrawConsole(int left,int top, int width, int height)
     Console.Write("┌");
     for(int j = 0;j<width-2;j++) Console.Write("─");
     Console.WriteLine("┐");
+    for(int i = 0;i<height-2;i++)
+    {
+        Console.Write("│");
+        for (int j = 0; j < width - 2; j++) Console.Write(" ");
+        Console.Write("│");
+    }
 }
 //do
 //{
