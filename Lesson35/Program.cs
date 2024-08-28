@@ -38,9 +38,14 @@ void PrintDirectory(DirectoryInfo directory, string indent, bool lastDirectory)
     }
     Console.WriteLine(directory.Name);
     DirectoryInfo[] subDirectories = directory.GetDirectories();
+    int count = 0;
     for (int i = 0; i < subDirectories.Length; i++)
     {
-        PrintDirectory(subDirectories[i], indent, i == subDirectories.Length - 1);
+        count++;
+        if(count==16)
+            PrintDirectory(subDirectories[i], indent, true);
+        else
+            PrintDirectory(subDirectories[i], indent, i == subDirectories.Length);
     }
 }
 do
